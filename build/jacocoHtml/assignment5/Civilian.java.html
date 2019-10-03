@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Civilian.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab2</a> &gt; <a href="index.source.html" class="el_package">assignment5</a> &gt; <span class="el_source">Civilian.java</span></div><h1>Civilian.java</h1><pre class="source lang-java linenums">package assignment5;
+
+import assignment5.exceptions.IncorrectAgeRangeException;
+import assignment5.exceptions.IncorrectWealthValueException;
+
+public class Civilian extends Piece {
+
+<span class="nc" id="L8">    private int wealth = 0;</span>
+
+    public Civilian(String name, int age) throws IncorrectAgeRangeException {
+<span class="nc" id="L11">        super(name, age);</span>
+<span class="nc" id="L12">    }</span>
+
+    public int getWealth() {
+<span class="nc" id="L15">        return wealth;</span>
+    }
+
+    public void addWealth(int wealth) throws IncorrectWealthValueException {
+<span class="nc bnc" id="L19" title="All 2 branches missed.">        if(this.wealth + wealth &lt; 0){</span>
+<span class="nc" id="L20">            throw new IncorrectWealthValueException(&quot;ERROR: Wealth can not be negative !&quot;);</span>
+        }
+<span class="nc" id="L22">        this.wealth += wealth;</span>
+<span class="nc" id="L23">    }</span>
+
+    public void decWealth(int wealth) throws IncorrectWealthValueException {
+<span class="nc bnc" id="L26" title="All 2 branches missed.">        if(this.wealth - wealth &lt; 0){</span>
+<span class="nc" id="L27">            throw new IncorrectWealthValueException(&quot;ERROR: Wealth can not be negative !&quot;);</span>
+        }
+<span class="nc" id="L29">        this.wealth -= wealth;</span>
+<span class="nc" id="L30">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

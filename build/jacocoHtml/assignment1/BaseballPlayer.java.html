@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BaseballPlayer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab2</a> &gt; <a href="index.source.html" class="el_package">assignment1</a> &gt; <span class="el_source">BaseballPlayer.java</span></div><h1>BaseballPlayer.java</h1><pre class="source lang-java linenums">package assignment1;
+
+public class BaseballPlayer extends Athlete {
+    private String teamName;
+    private double averageBatting;
+    private Integer seasonHomeRuns;
+
+    public BaseballPlayer(Name athletesName, Double height, Double weight, String league, String teamName, double averageBatting, Integer seasonHomeRuns) {
+<span class="nc" id="L9">        super(athletesName, height, weight, league);</span>
+<span class="nc" id="L10">        this.teamName = teamName;</span>
+<span class="nc" id="L11">        this.averageBatting = averageBatting;</span>
+<span class="nc" id="L12">        this.seasonHomeRuns = seasonHomeRuns;</span>
+<span class="nc" id="L13">    }</span>
+
+    public BaseballPlayer(Name athletesName, Double height, Double weight, String league) {
+<span class="nc" id="L16">        super(athletesName, height, weight, league);</span>
+<span class="nc" id="L17">    }</span>
+
+    public BaseballPlayer(Name athletesName, Double height, Double weight) {
+<span class="nc" id="L20">        super(athletesName, height, weight);</span>
+<span class="nc" id="L21">    }</span>
+
+    public String getTeamName() {
+<span class="nc" id="L24">        return teamName;</span>
+    }
+
+    public void setTeamName(String teamName) {
+<span class="nc" id="L28">        this.teamName = teamName;</span>
+<span class="nc" id="L29">    }</span>
+
+    public double getAverageBatting() {
+<span class="nc" id="L32">        return averageBatting;</span>
+    }
+
+    public void setAverageBatting(double averageBatting) {
+<span class="nc" id="L36">        this.averageBatting = averageBatting;</span>
+<span class="nc" id="L37">    }</span>
+
+    public Integer getSeasonHomeRuns() {
+<span class="nc" id="L40">        return seasonHomeRuns;</span>
+    }
+
+    public void setSeasonHomeRuns(Integer seasonHomeRuns) {
+<span class="nc" id="L44">        this.seasonHomeRuns = seasonHomeRuns;</span>
+<span class="nc" id="L45">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
